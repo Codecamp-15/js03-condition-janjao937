@@ -47,6 +47,7 @@ let num1 = prompt("Assing Number1");
 let num2 = prompt("Assing Number2");
 let num3 = prompt("Assing Number3");
 let targets;
+
 if(isNaN(num1)||isNaN(num2)||isNaN(num3))
 {
     while(isNaN(num1)||isNaN(num2)||isNaN(num3))
@@ -79,3 +80,60 @@ if(isNaN(num1)||isNaN(num2)||isNaN(num3))
  
 //targets;
 targets.forEach(alert(targets));
+
+///============================================///
+
+/// Teacher Code ///
+let x = +prompt("Enter Number1!!!");
+let y = +prompt("Enter Number2!!!");
+let z = +prompt("Enter Number3!!!");
+
+let min = 0;
+let mid = 0;
+let maxValue = 0;
+
+if(x>=y&&x>=z)
+{
+    maxValue = x;
+    if(y>=z)
+    {
+        mid=y;
+        min = z;
+    }
+    else
+    {
+        mid = z;
+        min = y;
+    }
+
+}
+else if(y>=x&&y>=z)
+{
+    maxValue = y;
+    if(x>=z)
+    {
+        min = z;
+        mid = x;
+    }
+    else
+    {
+        min = x;
+        mid = z;
+    }
+    
+}
+else if(z>=x && z>=y)
+{
+    maxValue = z;
+    if(y>=x)
+    {
+        min = x;
+        mid = y;
+    }
+    else
+    {
+        min=y;
+        mid = x;
+    }
+}
+console.log(`Max => Min${maxValue}/${mid}/${min}`);
